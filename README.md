@@ -38,34 +38,5 @@ Este projeto transforma dados simples de preferências musicais em uma análise 
 - **Design**: CSS Grid, Flexbox, Gradients
 - **Ícones**: Emojis nativos para melhor compatibilidade
 
-📈 Métricas Calculadas
-Categoria	Métrica	Valor
-🎵 Artistas	Total Analisados	14
-🎭 Gêneros	Diversidade	8
-🇧🇷 Nacional	Artistas Brasileiros	4
-🌍 Internacional	Artistas Estrangeiros	10
-⏳ Décadas	Período Representado	1960s-2020s
-🚀 Possíveis Melhorias
-Integração com API do Spotify
 
-Banco de dados para persistência
-
-Sistema de votação em tempo real
-
-Análise de letras e sentimentos
-
-Comparativo entre grupos diferentes
-
-🤝 Contribuindo
-Contribuições são bem-vindas! Sinta-se à vontade para:
-
-Fork o projeto
-
-Criar uma branch para sua feature (git checkout -b feature/AmazingFeature)
-
-Commit suas mudanças (git commit -m 'Add some AmazingFeature')
-
-Push para a branch (git push origin feature/AmazingFeature)
-
-Abrir um Pull Request
 
