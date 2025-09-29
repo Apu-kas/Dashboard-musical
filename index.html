@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Análise Musical</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎵 Análise Completa de Artistas Favoritos</h1>
+            <p class="subtitle">Métricas detalhadas e insights sobre preferências musicais</p>
+        </div>
+        
+        <div class="charts-container">
+            <div class="chart-box">
+                <h2>📊 Artistas Mais Votados</h2>
+                <canvas id="artistsChart"></canvas>
+            </div>
+            
+            <div class="chart-box">
+                <h2>🎭 Distribuição por Gênero Musical</h2>
+                <canvas id="genreChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Métricas Principais -->
+        <div class="highlight">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+                <div>
+                    <span class="stat-number">14</span>
+                    <span class="stat-label">Total de Artistas</span>
+                </div>
+                <div>
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Gêneros Musicais</span>
+                </div>
+                <div>
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Artistas Nacionais</span>
+                </div>
+                <div>
+                    <span class="stat-number">28.6%</span>
+                    <span class="stat-label">Pop (Mais Popular)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Análise Detalhada -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <h3>🎸 Análise por Gênero Musical</h3>
+                <p><strong>Pop lidera</strong> com 28.6% dos votos, seguido por Rock (21.4%) e K-Pop (14.3%).</p>
+                <p><strong>Diversidade marcante:</strong> 5 gêneros diferentes compartilham 35.7% dos votos restantes.</p>
+                <p><strong>Rock divide-se</strong> entre internacional (The Beatles, Bon Jovi) e nacional (Engenheiros do Hawaii).</p>
+                
+                <div class="genre-breakdown">
+                    <h4>📈 Ranking de Gêneros:</h4>
+                    <div class="genre-item">
+                        <span>Pop</span>
+                        <span>4 votos (28.6%)</span>
+                    </div>
+                    <div class="genre-bar" style="width: 100%"></div>
+                    
+                    <div class="genre-item">
+                        <span>Rock</span>
+                        <span>3 votos (21.4%)</span>
+                    </div>
+                    <div class="genre-bar" style="width: 75%"></div>
+                    
+                    <div class="genre-item">
+                        <span>K-Pop</span>
+                        <span>2 votos (14.3%)</span>
+                    </div>
+                    <div class="genre-bar" style="width: 50%"></div>
+                    
+                    <div class="genre-item">
+                        <span>Outros 5 gêneros</span>
+                        <span>5 votos (35.7%)</span>
+                    </div>
+                    <div class="genre-bar" style="width: 35%"></div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <h3>🌍 Análise Geográfica e Cultural</h3>
+                <p><strong>Internacionalização:</strong> 71.4% dos artistas são internacionais, 28.6% nacionais.</p>
+                <p><strong>Coreia do Sul em destaque:</strong> K-Pop representa 14.3% do total, mostrando globalização musical.</p>
+                <p><strong>EUA domina:</strong> 42.8% dos artistas são norte-americanos (Lana Del Rey, Sabrina Carpenter, etc.)</p>
+                <p><strong>Reino Unido histórico:</strong> The Beatles mantém relevância após décadas.</p>
+                
+                <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <strong>🎯 Distribuição por Países:</strong>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>EUA: 6 artistas (42.8%)</li>
+                        <li>Brasil: 4 artistas (28.6%)</li>
+                        <li>Coreia do Sul: 2 artistas (14.3%)</li>
+                        <li>Reino Unido: 1 artista (7.1%)</li>
+                        <li>Outros: 1 artista (7.1%)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <h3>📅 Análise Temporal e Gerações</h3>
+                <p><strong>Décadas representadas:</strong> Desde os anos 60 (The Beatles) até artistas atuais (Sabrina Carpenter).</p>
+                <p><strong>Convivência geracional:</strong> Artistas consagrados dividem espaço com novas revelações.</p>
+                <p><strong>Longevidade do Rock:</strong> Gênero mantém relevância por mais de 5 décadas.</p>
+                
+                <div style="background: #fff3e0; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <strong>🕰️ Linha do Tempo Musical:</strong>
+                    <div style="margin-top: 10px;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9em; color: #666;">
+                            <span>1960s</span>
+                            <span>1980s</span>
+                            <span>2000s</span>
+                            <span>2020s</span>
+                        </div>
+                        <div style="height: 6px; background: linear-gradient(90deg, #ff6b6b, #ffa726, #4ecdc4, #45b7d1); border-radius: 3px; margin-top: 5px;"></div>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 0.9em; text-align: center;">
+                        The Beatles (60s) → Engenheiros (80s) → BTS (00s) → Sabrina Carpenter (20s)
+                    </p>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <h3>🎭 Diversidade e Nichos Musicais</h3>
+                <p><strong>Ampla variedade:</strong> Desde MPB até Eletrônica Experimental.</p>
+                <p><strong>Fusão de estilos:</strong> Artistas como Yung Lixo misturam hip-hop com influências brasileiras.</p>
+                <p><strong>Música de comédia:</strong> Bo Burnham representa nicho específico com 7.1% dos votos.</p>
+                <p><strong>Experimentalismo:</strong> Skylab mostra apreço por produções não-convencionais.</p>
+                
+                <div style="background: #f3e5f5; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <strong>🎨 Espectro Musical Representado:</strong>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
+                        <span style="background: #e1bee7; padding: 4px 8px; border-radius: 12px; font-size: 0.8em;">Mainstream</span>
+                        <span style="background: #c8e6c9; padding: 4px 8px; border-radius: 12px; font-size: 0.8em;">Alternativo</span>
+                        <span style="background: #bbdefb; padding: 4px 8px; border-radius: 12px; font-size: 0.8em;">Experimental</span>
+                        <span style="background: #fff9c4; padding: 4px 8px; border-radius: 12px; font-size: 0.8em;">Regional</span>
+                        <span style="background: #ffccbc; padding: 4px 8px; border-radius: 12px; font-size: 0.8em;">Internacional</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Insights Finais -->
+        <div class="metric-card">
+            <h3>💡 Insights e Conclusões</h3>
+            <div class="insight-grid">
+                <div class="insight-item">
+                    <span class="emoji">🎯</span>
+                    <strong>Preferência Balanceada:</strong> Entre mainstream e nichos específicos
+                </div>
+                <div class="insight-item">
+                    <span class="emoji">🌎</span>
+                    <strong>Global + Local:</strong> Internacional domina, mas Brasil tem representação significativa
+                </div>
+                <div class="insight-item">
+                    <span class="emoji">🔄</span>
+                    <strong>Convivência Geracional:</strong> Clássicos e contemporâneos coexistem
+                </div>
+                <div class="insight-item">
+                    <span class="emoji">📊</span>
+                    <strong>Diversidade de Estilos:</strong> 8 gêneros diferentes em apenas 14 votos
+                </div>
+                <div class="insight-item">
+                    <span class="emoji">🚀</span>
+                    <strong>Tendências Emergentes:</strong> K-Pop se estabelece como força global
+                </div>
+                <div class="insight-item">
+                    <span class="emoji">🎹</span>
+                    <strong>Fusão Cultural:</strong> Artistas brasileiros com influências internacionais
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 15px; background: #e8f5e8; border-radius: 8px; border-left: 4px solid #4caf50;">
+                <strong>🎵 Perfil Musical do Grupo:</strong>
+                <p style="margin: 10px 0 0 0;">
+                    O grupo demonstra <strong>paladar musical eclético</strong>, com forte apreço por Pop e Rock, 
+                    mas com espaço significativo para gêneros alternativos e internacionais. 
+                    Há um <strong>equilíbrio saudável</strong> entre artistas consagrados e contemporâneos, 
+                    entre produções nacionais e globais, mostrando uma audiência musicalmente educada e diversificada.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
